@@ -126,7 +126,12 @@ Question: ${question}`,
     res.status(500).json({ error: "Failed to generate explanation" });
   }
 });
-
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
 app.listen(3001, () => {
   console.log("Backend running at http://localhost:3001");
 });
