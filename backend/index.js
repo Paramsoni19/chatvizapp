@@ -4,7 +4,9 @@ import cors from "cors";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3001","https://remarkable-strudel-8936f5.netlify.app"]
+}));
 app.use(express.json());
 
 let questions = [];
